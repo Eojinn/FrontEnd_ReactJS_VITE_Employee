@@ -62,7 +62,7 @@ export default function DeptSection({ showToast }) {
     const loadDepartmentsPage = async (pageNo = 0) => {
         setLoading(true);
         try {
-            const data = await departmentApi.getPage({ pageNo, pageSize: 5, sortBy, sortDir });
+            const data = await departmentApi.getPage({ pageNo, pageSize: 5, sortBy, sortDir:'desc' });
             setPagedDepts(data.content);
             setTotalPages(data.totalPages);
         } catch (err) {
