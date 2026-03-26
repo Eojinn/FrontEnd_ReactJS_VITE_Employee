@@ -20,12 +20,14 @@
  */
 import { create } from 'zustand';
 import { EmployeeApi }   from '../api/employeeApi.js';
+
 import { DepartmentApi } from '../api/departmentApi.js';
 import { devtools } from 'zustand/middleware'
 
 const employeeApi   = new EmployeeApi();
 const departmentApi = new DepartmentApi();
 
+//employeeStore 생성
 export const useEmployeeStore = create(devtools((set, get) => ({
 
     // ── 상태(State) ───────────────────────────────────────────────────
